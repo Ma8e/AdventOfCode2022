@@ -17,3 +17,10 @@
   (testing "top n"
     (is (= [4 5 7] (top-n 3 [5 3 4 7 1]) ))
     (is (= [5 5 7] (top-n 3 [5 1 4 7 5]) ))))
+
+                                        ;day 2
+
+(deftest day-2
+  (testing "total-score"
+    (is (= 15 (score "resources/day-2-test.txt")))
+    (is (= 12 (score-2 "resources/day-2-test.txt")))))
