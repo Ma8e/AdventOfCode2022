@@ -1,0 +1,1065 @@
+;; Connected to nREPL server - nrepl://localhost:57685
+;; CIDER 1.5.0 (Strasbourg), nREPL 0.9.0
+;; Clojure 1.11.1, Java 19
+;;     Docs: (doc function-name)
+;;           (find-doc part-of-name)
+;;   Source: (source function-name)
+;;  Javadoc: (javadoc java-object-or-class)
+;;     Exit: <C-c C-q>
+;;  Results: Stored in vars *1, *2, *3, an exception in *e;
+;; ======================================================================
+;; If you’re new to CIDER it is highly recommended to go through its
+;; user manual first. Type <M-x cider-view-manual> to view it.
+;; In case you’re seeing any warnings you should consult the manual’s
+;; "Troubleshooting" section.
+;;
+;; Here are a few tips to get you started:
+;;
+;; * Press <C-h m> to see a list of the keybindings available (this
+;;   will work in every Emacs buffer)
+;; * Press <,> to quickly invoke some REPL command
+;; * Press <C-c C-z> to switch between the REPL and a Clojure file
+;; * Press <M-.> to jump to the source of something (e.g. a var, a
+;;   Java method)
+;; * Press <C-c C-d C-d> to view the documentation for something (e.g.
+;;   a var, a Java method)
+;; * Print CIDER’s refcard and keep it close to your keyboard.
+;;
+;; CIDER is super customizable - try <M-x customize-group cider> to
+;; get a feel for this. If you’re thirsty for knowledge you should try
+;; <M-x cider-drink-a-sip>.
+;;
+;; If you think you’ve encountered a bug (or have some suggestions for
+;; improvements) use <M-x cider-report-bug> to report it.
+;;
+;; Above all else - don’t panic! In case of an emergency - procure
+;; some (hard) cider and enjoy it responsibly!
+;;
+;; You can remove this message with the <M-x cider-repl-clear-help-banner> command.
+;; You can disable it from appearing on start by setting
+;; ‘cider-repl-display-help-banner’ to nil.
+;; ======================================================================
+;;  Startup: /opt/homebrew/bin/lein update-in :dependencies conj \[nrepl/nrepl\ \"0.9.0\"\] -- update-in :plugins conj \[cider/cider-nrepl\ \"0.28.5\"\] -- repl :headless :host localhost
+aoc2022.core>   (string->rucksacks rucksacks-string)
+
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:43:17).
+Unable to resolve symbol: string->rucksacks in this context
+aoc2022.core> (use day-3)
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:47:15).
+Unable to resolve symbol: day-3 in this context
+aoc2022.core> (use '[aoc2022.day-3])
+nil
+aoc2022.core>   (string->rucksacks rucksacks-string)
+
+Execution error (ClassCastException) at aoc2022.day-3/string->rucksacks (form-init18288460431332102703.clj:8).
+class aoc2022.day_3$string__GT_rucksacks$fn__6114 cannot be cast to class java.util.regex.Pattern (aoc2022.day_3$string__GT_rucksacks$fn__6114 is in unnamed module of loader clojure.lang.DynamicClassLoader @335400d6; java.util.regex.Pattern is in module java.base of loader 'bootstrap')
+aoc2022.core>   (string->rucksacks rucksacks-string)
+
+["LHLRlCCvCLVgHPfCHtVjBGrBDNzWFBsBGBfscGsD"
+ "nQwbnwwpbrJBrNWB"
+ "hmnSdSdQpTpdnlPdvddPNglLjH"
+ "RZhwpDsNqVmQClwl"
+ "TLJfLTPqcvTrvvLMLMlVzzvVVQQtmQCmtzmV"
+ "MJjccdfTMcbqjNSRSZsSDZ"
+ "LLrNNqCTCwLTttwcNctqFGmRBSBjzjbSzbBbjNbzjB"
+ "GnhhZQPDGdldgQmQSjpzjzQssb"
+ "gDJZPMnPnhlhJWhZntLCLcTqVMLrGVtMfM"
+ "rrBgDBGnVnffDnfQQqngJhhSRQvhhCRRRSZbRpRzwQ"
+ "NtLmcHPHMHHssFJphZpbhwpNRbbC"
+ "LJPHlmdJDgrrqrnl"
+ "nJhrcNnfrFwNhPdMQSgZSCMjQn"
+ "LjqGWsGWllRRlHVsqGGWsZZSSHQgPmHZZSPvdPCmvQ"
+ "zqqVTWjqBsTJprNbppFb"
+ "zSMgWzlgFSWFcGZlCZGlrrTc"
+ "spnQHdQmHddNmpWrpWcChccTWc"
+ "BsRsnmBQdNWsvRPzbzbLzDVSPSbVLM"
+ "lDfbffptlrJZTBJHjjBWjT"
+ "LcwwgQLgzvztwtMQGCMVCHWmnmjWnGhFHnZjmZhjhT"
+ "sCqtzsswCgccbSqrDSqbNNfN"
+ "snnnjwRRwGSSnVmhhVMhGFbgQgbzFFPPgQQmPbbgQd"
+ "qCrccvcDDcvqDZlCcrcfQNQFdsbgWzFfQddQQPgQ"
+ "ZcrvrBqBTCZnBBswjwpSRs"
+ "qSczBfBcjMZMfctsmsGmFJsmQQcQCr"
+ "wPhTLNVNGLNdGHPHwlQsnrnmnrQvHFFHQn"
+ "dLdwbNLRdgGbgTjZfDbqDWjftSzW"
+ "rZwlrtRtNtlHqVBtdqQgdq"
+ "fbwzpPwbhJzpwfTSHgdgqcJVcBjHvHdJ"
+ "LLPbhzPpTTbTshfGhPwSFWnNmMrrZZmNmZDmWNCCZs"
+ "tMHgMWMQWgFJTHsWMvJrVdlmvlSvdvlpvG"
+ "RNfZZfRttBtdlZlmmmplSS"
+ "DzzNDDRwnwwbLnMFtsMntQFM"
+ "qHqBMNqgMwHMbnGStHSbndnt"
+ "PwWZPjpfsDsDsPfPfjdbSvbWhdFSbFGSWFtr"
+ "wfpjpJcfVsspzZRRszDpwcRggLTQQBLqNqcqcggLCgNmlq"
+ "TmmFjtvFdDGjdFFJjFRDLNLHGBVcqgLcLgVBLqgV"
+ "WbWSPSwQCWrWQSrCbwNVlLlBZLBvLlvZVqPl"
+ "SfwbhrwQQbbMwCwWCrbwJRvptJfjDTDRvzTttRjp"
+ "jzqSMszqsbVVMVMgWhWCgMrpGgpB"
+ "wrwLcFQmPlFFlwLZmFGTfPvWGfPvhWWWvGgf"
+ "wRZtHFHmzNDHSqrs"
+ "NprlCgrrnrNCjplSCtljpFrFZLzzgwmVgBzBZZPwzBPQBwVL"
+ "HsDMvHTDfsfQZfZzmPWL"
+ "JcPsDGTqcTqSdrSCtnCt"
+ "cFcmfmJFtFmtlTNtLlCWTT"
+ "QPQzjRRsVsQqBqwlTlNBpLNSWDpN"
+ "QblgzRPgbgQsVvgPVQhgQqjvMnJfccnZddcGGfrFJMFGGF"
+ "PWbWmFFnPFPWbDVVmmDHDFGdGhTQdLdnTZQZZcGSGGdQ"
+ "ClzjNBlBJvlsBdcPLZdLPQjLQZ"
+ "vJMBpBzzzfNCCzCffJlzgMWDWwPDtVtmVHPMwVHD"
+ "bJjWzWFlTMjjSNBrRcBrZR"
+ "mwnwqPwnGQPCqmJmPQJPCVNcRZBRRrrNrmrcVpSrRf"
+ "PGvQQGPqvhWFWlJbDv"
+ "PNPrdmPGRJlZCrCJlGQzjRFLpFRppjgppgcj"
+ "DwfVnssbVnSWShDwsnnhBLFjFgjFBzDBjHDLpHDj"
+ "vSsMgbsTfTwwfMffnTvgNNCmrPJtCNrJrCrrtvGm"
+ "cRnRplCzccVcrwcnppVVzRCNhfhgChNJfPgHJdHDNtNCtP"
+ "WFmbLMZdLBqfJNbPTfttDD"
+ "BdMWdQsGsSsrpzrswr"
+ "llhhZzSLqlzwRrffzwzT"
+ "GvBbNjHbjjTGGHHFcsFvfRrtJQPvtRfwwfrPJD"
+ "HGbcbTTjHFNpppmLnSdplWqZ"
+ "FhwFbPwsvtRgVCgvMT"
+ "HJVHdHBWdBQSSSQnqSQLqZHtcCctppgBtRrgtMCgTprRMM"
+ "QNzZLVSLLLDGPPzPmbFs"
+ "VdTHmWCVZDTPBBWBQBFQQg"
+ "MzjMjzCjJsbJhhPz"
+ "crfGGLwwLGrtrvCtdTmdDH"
+ "wRLvLmGQLwFPBRmnLCLmGQTzNNqVNZMMVzzQbzVbNZpMVb"
+ "jsgJWjdHghsglHtWsjSfHzVNqzfpCCzqDpzDrVVrrD"
+ "jJtWWsWhtSHsSSgchthHcjHCvcFCRvwvvTTFBGvBmmGLnL"
+ "LpjWLNqWpwRWMqLRGjwJlStgbtrVgHFrGllDDrVH"
+ "SQmmTcZZvSZBTmTSzhPTddbVDhHllgFCDHtrDHgDVVDr"
+ "PzTTvznBncnfTmTTQcPdmzzMqWNfqwRLpWJsNfwLJjsSwJ"
+ "lsGdGwBsflGrfsHvHwQLdFrmPhDhCFhhjWCVmhDzmbmPhC"
+ "qtMSNNZZMpcnVzmVbCqjWjzB"
+ "ZZcgRJpBtTMNnntncwgQQdfGHHHlsQffLH"
+ "jBBtjjqfnwStBSrVVFwSVVvvWzHmcWvWbvPmPbWrbMRM"
+ "GTdNDlpJhlCvPbHgcDmgDH"
+ "JZQdQhNldLdTpGdJGdNCpLZdSBnnBFfHHswqqjffZsqsFjns"
+ "phJhDPQLDSJvpHhvDJhfrFQVRrnsslrgwrVrrRjg"
+ "mWNWqZWWZBMdCGMNCdWmWCNCsnVFTRsVnZFlsrlFwFgVsgjr"
+ "dWdjttGmNCBchJfhHvhPtvJt"
+ "CSFSFdfCzJhtSCHQFjQHQWFHRNHG"
+ "wnbrgZnwZgDLsLbwsLrsrNWQNjPZHHvPPQHNqHHvqB"
+ "LbmTLDsgggQmzmCCppdtSJtM"
+ "SzSSchCdZgHbwHSZ"
+ "GsMMmslnsfmNGNNNVVtZWdwbqQbpgWjjgWZjQm"
+ "DvlMtflGGVGthhzdvLvhrTcc"
+ "dvfVNqHlQfGRcjDczlCDnC"
+ "PsPsStLprtTTFSTLmhSVSFSsCzRRjzDnMJDCMWWDjMnMnpjW"
+ "hBFPhSBFttBhStLwmsPTtPsFHZNGfQgdgdZbdqZwdgNVvwvH"
+ "rhjcChdgjdCrjLjLLSLmLFMmFtNnnbQNNNPMbbmtQF"
+ "lwWRZDlsWzrbbQpN"
+ "rTRqsqDRRRsDRVrqDgBCdCVShjCBHchjdh"
+ "PsspltlPsmTsmbmfTPSTTCGjhJJjCnpqJJNhhJwNJh"
+ "BdrLVvgQLQVLHRZGnqRhRNdwNC"
+ "WrFVHDgDQFHVLVVDFQMLltmPsssPztwsPTzsWcmc"
+ "CBvvSzFGSGGWfFZpcHqjvjcvcqccJq"
+ "bRQwgbbhrRhdwmQbWtdjnJHqVJccJqgHVJHJcl"
+ "RRmbPrNRRPLLtmbQmbNwddCTSTzBSDBDSMFTBSSPZFFW"
+ "cppsSgNrSgwrGRdHRrwd"
+ "LzqqmCLCLWQvCzmzZwHnZZHSwvwnlDlS"
+ "hzFqFLLLFtSNVsFF"
+ "zpZcZZZdppzDLWDtJGgfGbTGGJTGcc"
+ "qhvNSClCShRrRBBWTQfgBFbgtfgg"
+ "HlHqvjqmCvCvlSSHvVdsVDzjpVjMWdwLpP"
+ "qLdsfNsTHQwnSNSBNS"
+ "gFhWzrhfbmlpmZhJWrFSvRMnwwvvpBpBSpQBMv"
+ "rgWZrbmlmbzFfglgWzGggFJLccVPqLPqtPLGcPsPHcPLTd"
+ "jTTWRCCbwJJNTHrffqNnzh"
+ "DZVmDpgGBVdcMZnqfhlNHQMlNNhl"
+ "sDcpsDZBcmgdssZcnmSWCPWRSRwJWwvFLvRwWj"
+ "hWwhgQlQQgjPhFChZVdbcJ"
+ "zHsrMPNMtDDTmbcJbccmDb"
+ "znzPzrtHtHtMzqHHrsSSLwljqfgwGggjlQjQQgQBGj"
+ "JpnRtqlJsqDJJBBNNmQmgdmRNGGmvv"
+ "hTCbTwMCwVhTWdmDgDvjWD"
+ "MDhhMSwZCbbLVhbLcDSwCwZtZznlzlnqBPBpHPPlBlHJ"
+ "CtvnvqNNDchrhFVpwftmgQgpQfwS"
+ "MbdqPWGjBjMBbwlfVgdmfSfJJS"
+ "jWzbzjWWjWMMbRbMsjzBhChrNHcNqHcrNnhssnsc"
+ "LlLJSWgWllSShRmRlBLJSVBzpTHzTTJcpTHzpTTcPpGpTr"
+ "MfMqnvbvDfbFFZDfFNjsGrRppHpZGGcGrcPprz"
+ "wfNFvtwMvbnntftjfNtVmlgmStBmlBWdQQRg"
+ "GpFRRPGWqzHwdqpzqbjjgfZptBBVMSjSfBZc"
+ "TClllrnsJvDMBgcjfmtssB"
+ "NlhNNchrNJlLvClNDrzbGRqwqqqwqPPFLGdd"
+ "qFmVtvmmVvzzFtzzGzzMNNMSSTjNJlStjSfNgf"
+ "sWrPBCnCTMsTJfSM"
+ "QTLbpnRpRppnRQdRzRZqGzFFVVRz"
+ "WGGPjFvMVNjlcQJr"
+ "bslfldbgtpSmwmSNHQhLJhcwLcQrQV"
+ "gTltCsSsssPFnDzWPTMz"
+ "hhRRhQgGrHjhRsrgqznbzncZjVVJVjncjd"
+ "DSFfNTBFSDmMSTDlFbBBdccCdJJZCbZCbW"
+ "DDLmdSmTvQQgsgvGHH"
+ "dNqNgNvFnvdZHFWnZWNBTQlPTppPGlCTpBQppq"
+ "LJrtLrsLjsGvTCTpQP"
+ "mtLhjVjMhhmVMvtJmLfhFWHnngbRRdZHngnZWZ"
+ "NzdVNzqqCtCHMMZBCGBW"
+ "psjllRjFpjpbjspFmWmWnLBmMMQMmHbm"
+ "DhsTPDRTDHpsvRjdNtzJJJdhqwcdqc"
+ "VbhRbZgRHMFhQpHd"
+ "fvlqPzmzJJqJSPsWmPTNddNFHbNFGHNTHSbc"
+ "CqzlfqrCnbrBZjBr"
+ "SNSrDZFHnTqFsFddsCmsMC"
+ "ctVthlGjfhGljcCJmcqMCqcqBB"
+ "VtjvtjhhPPtWqVPLjvqjLVNRppRTvNSnbnZRZTHRnpTD"
+ "fzsBSsNBMNMszNGGJvgjjPggzjdFPgpJ"
+ "bmrVVVrmRrrvRmwvqlbHTDgwdLFjQPJPFddwJPFggj"
+ "HHHrZqhqbTMcZBCZfvcN"
+ "tzsJsnsmBzlVqjssZZrg"
+ "MQZHfNCffpMfpGSpPvpfCGCTTVwFTlwrggjSgqFjVjTwwg"
+ "NfMGGGPZpvLDvLCGGfQHMpZRDRWchRRtBBzmJnmzmnBznb"
+ "BSRBjtNjZrsjRjjNsVBjbrMwCgGCCwCdHrlcdccGcH"
+ "DJTTJLpFnFLdJJqPLTWqLTpwHzCGccCzvvcHwMvWzggCMC"
+ "PmpTTdndmmLqfLTTLDqJVBssbbStVmjjSsZNsBZm"
+ "ddCnZvCDSgghFhbbmFVQ"
+ "JzlMcJTMMPPfJJfsMsjWlHVhLbQVlFWmHbbb"
+ "BPwwsPfsqszfFqppwTsqzpntDSnCBnDRZrSZdnDdtvZD"
+ "SllzzPplWldwLGlzbtPZZjVScnnNSjnNsqNqsc"
+ "BrCfFDJFDHBhJCChQFhCCBDcTnNVpZZcNcvQTcjvvcTcZV"
+ "RCmFHJDJhCmBmRCgDCFRpmGbWWbLPlbMWzzGttzgLMbt"
+ "vGTfsZnfvfzTjsnfzTJlwqQjwmCqqMFjFFQMlq"
+ "LHtHRVLRLNtWcmVbRrPbRcwgQwgwMwClwClwrgFpwqpw"
+ "VDPtbVLBmLbLbDDNnnnzJJfJfBfvSGBn"
+ "lpPCRVVQppzHlZgzglgF"
+ "rtfttLdLdscmGtzngPHHFHFH"
+ "LPLLhfhbTDLmPdcrcWdTcDSjjRqwwbqpRwNBNpBwjQwR"
+ "dWQfCJrwvQCfFqNwRbbzVbVVLGTR"
+ "ZpZshPMzBjGjtVMN"
+ "phpSlSlDlcZpcZPrdHCFzFzFWFDWQH"
+ "tfMMZhjLlChsdsds"
+ "PHQRMHRwpRPBMvWvPRBpPdWDslGrbscTlTGcCsGddG"
+ "FqPSvHPHPBzQRBBwwRJfVtgjzntMntjJLMtJ"
+ "VBwJvwVwNbVRdPwMgWggGMgH"
+ "jDhqflDDhrqshNhdgPGHphLg"
+ "FltsrtcFrclrNqDfqmzQJQQRBzBCvCFvBR"
+ "RZsSSJDJZLDWnGDMLD"
+ "ClbnlfmpNtmgbtmMqWdjNGjLQjLqLj"
+ "gcblTlVCnVmcPrvRPFRrZs"
+ "mbJcScmbDWLmSBzwjPRTfjmmRhpl"
+ "tFFFtGttdClHVMCHFMMwTpwNjGpzPpNRRzzpPN"
+ "gCCdvZCVHsFvJnnDSglSglDn"
+ "dSndnRRvVSpLSphfqvTgWqrzqvvw"
+ "PBFQbQbDhGfjTTFzqG"
+ "tPmCJMtDDNcMVdhhVc"
+ "QVRVHCQRmdTRqrZFCWrLZNZFbb"
+ "ncncsPnhslBRSSSbFhtbZDLMbLbtLb"
+ "lvflPcfPSsPzlJlPlcPBfHJQwRwHmqdVpRGGGdQmww"
+ "GTCGMCcGdgRnnbbbMLwmMz"
+ "DQFZzllWDDLwDJLnJpnp"
+ "qBVrNNlZfFNlWlWqfRzhgvhCqHRdCGGSvc"
+ "ZnMnGbLZfJcBcLTgWF"
+ "dHJjdzqssHHNJwCHpHtDccvtBTtvccWWrrTWSg"
+ "CmlqCNzCzHlmdsqzNzRhMhZRbZMPmRfRJQPb"
+ "LsLLrFLcFjrtmZhhmhHGhJGGhH"
+ "ffvbsbWpSBSSCCQbsSBSwwJHHvhZHHGdGVGlMlTVdZlT"
+ "pSzWNPSfCwWNPBfsFqtFLtsqRzqFgj"
+ "hwwpvjVppGpwWGLrcPjrbrrdbjdL"
+ "FBqFFMFHHsHssNHtslqtFmldnnLrPhMnccrnMzZnbLgPLz"
+ "mJBSstlJQpwGSVhC"
+ "cgJDVWsrWggpcHhMzwwPnQMWMm"
+ "SZGBjdBqBBjGjjqNGfGNNHPnRSQFzhnwmnQzQnPHMR"
+ "bjjCZddjZbZBCtLhCZhftrgJglcTlJgvTllJvDVDLg"
+ "QpRJpCFdpqTQcqSTBBGBZVjZjVjFvwVB"
+ "nnnWfnHhPDlDnlLwGjBBbVVZGbCGbP"
+ "LhhLMLMrMWMrCprTqpJQpz"
+ "dqGGZJdZbTTMFFTGJFFbMdnCHSdWcmNmcCdWSggfSW"
+ "QsjjtrzLrQwDPjrQLrCfSSnmCmHWlCgmzlNl"
+ "PQpQPjQPsBstLBPttDrjBwTZMFMZFvJFJhMhnMJqpTJJ"
+ "JMLrSvHJdJvvJfrHMJRfWzWDFPwCcWqRRRcq"
+ "ljZsZTmmtTBlpTlTjQZCtNFPVqDRwWwWWVPcDRVpFRDz"
+ "mBgQgNNTNvrvJSvgCb"
+ "DWbWtzWDfDffbsMbZMffDDLncnnCJmLVsJJJnhgcngLs"
+ "TjgNGSBRTRTQrFRjFGBVLwLnnNncCLLCCcmhPC"
+ "GgGjvgddvvWqqfdZftWH"
+ "zMmsQlMfQQMhjsmjfsmHlhncRRZnRRRJRvZWWnhccdRC"
+ "BptFtDSSrTrpgtgqqgtZtvVVdVvccVnJdVnG"
+ "qpgPqBLDNTgqBrSLpDBMJfjzmbJMHjLMfjslzH"
+ "DPgLgPhfNDRqhDFDsBTtrrrdbbztCbtf"
+ "MjGSScGVGSlJjbbrtTvdzsTq"
+ "JJwJGWMZwMlWnFFgqNQFpF"
+ "WRGDHmGqWHlrmtVVVRVqpNZvZvvvTNPMPjbPdM"
+ "BwhBwsnzwhzSfCfswFvpvTzTdpMpjvPMZNTb"
+ "LFFQgnbfChSFBhFnftRRLrttDmmRJHtlGH"
+ "MhqhRHmDdRlRlGnfZbJVsNNZDnNb"
+ "QwvzgtwvFpmjwzLjFLJZrsZbPfPZbsVpfPsb"
+ "gvjTzBLztLTjwFjtgLTgtzwdWRqdqRTMSWcWTmWlqdhHHm"
+ "ZfzzfmhdpNLNBDDsFfQVCDggfV"
+ "HPFjljSnHrqVDgtgQgQMqC"
+ "rGnSJHvjSwGzwFhGZG"
+ "HqmHRDprrNTZTMbh"
+ "CJvzQRQVQCgNzZbzgMNd"
+ "vPCvFPcfQFlSJBcfRcPHmDGqWGDqpGtjjtGGHl"
+ "wcfpJVHfJBffBBGWRprNRWWWNdhv"
+ "DzMzMPqjDnjgCMZPZjzjCjChGdvvbhNdSvrhNWSNqWRRdS"
+ "jjCTtnMTDsMBtLRQwwQlFV"
+ "JqGnVqCTpDVCTnNLgmPzdgjcGmRg"
+ "HrSBJSHblsJthsBBSBhMsrzmdNRccjLzgcLmjgPPjlLL"
+ "HSwSttbswWJrbrSWppvVqvvnQVppQQ"
+ "JDCHssRTTwcRJDcnCDzRHsHNPZGBtPzFPSPttZSZGBqPBZ"
+ "vWhLmTlfrhFqGWSNQNqF"
+ "vpMhhpfvmTfhvbLhhgvmgvvlCCJCCMnDnDCnsjRMVDMDswCC"
+ "ZgjdlmlmmlJgHJlbZrSDrnrMrmLLDFprmp"
+ "TvqdTtdctvvDrGGSDn"
+ "CWPBhtWqPPwcdVwlNJfVVNNbbb"
+ "vgmrrwlPPrwPBPtmvFcMMrsMSJHscJcMSHDH"
+ "TWdLnZjCLGLMQLHBLS"
+ "jqVTTZqjdTVjNFNPqBvgvBNl"
+ "jmcgMzsmjmfvJwFpFfRWZRWp"
+ "drdSldTmCmTDCNCtbRRWqRwtttFZpZWZqw"
+ "NLCVLNLTbbTrQNQDvnzschgghnmnHQcH"
+ "sRVhVQDVDQRRMQhsqtRRNzqzbNzRqNGp"
+ "WdjCLHLjdFnCCnjnFnLHHmPmNJbztJJpprBpbGzbpJbqGWtB"
+ "CCFFCnFjdnjCTHmCLTLLCnFnQVhQQVDMhQQVgZZNVVDDsTVh"
+ "cGLzZgfzcNNzzRZvjvRmVDmmqCCDSdVVChVnDf"
+ "QstsPlWHQlWhMMtpsbtpQtlpDqBVqPSCSVnTTqmVdDVDVdBV"
+ "stptQFJrHptlQsFJMHtHhFbvNwvjLGvvNgzgjcwczzJcNJ"
+ "SQHCrCFPJZcnWrqn"
+ "vfJvJjfGGDggqZGcWD"
+ "pjLpRwzhRFtHdMQJ"
+ "HNSHNDvnvdffDNfqdZfdStcFFMGmmrRBcmFcrMrqrWFB"
+ "VblwzwhwPLlCGGzgzhmFjbjFrMFrjFBmbcrM"
+ "hlVPTCCQCCzVlPzhGgPVJCpHtdtSpQSZNNfnZdSSdnSD"
+ "cBVmfwqwmWggTRmQzTQl"
+ "CDnnHjSDPLCSCLHLHCHNCDFgwJljFQRRhlglbzJFQQhl"
+ "GptHLtNGHtCHSnCMtGWdcsqqWwMcqvdsVwfd"
+ "HsMFNRNWnbWfZLzWzQ"
+ "PqrpjqNdjjhPcdbpvmfzfbffbzmv"
+ "GjhhcPjPccVrqcPCldCjssHNnTnNttRwwVMTHMnV"
+ "jjCcBswcfnwgpPFPwFFGSFSwFb"
+ "VvmVhVvRRQqttRtQDLzLhqRlrBFMWrGPBSMSZSMFqBWZZP"
+ "mvQmLRvJtBJVnTcJCjsjsdgp"
+ "qgqvPbdMDMMPwpbLFGwtNlNF"
+ "TTQmdJTnSllFGtJNtw"
+ "CSSHmQHfmVcHjQmSvPBdBDDWMVhMhRMB"
+ "WCvQNZdhCDnnPfQPfTzjHcppsHjpsSjHNS"
+ "mFMgMBlMmBqHjjBfTjHzBc"
+ "grJbrqfqMVFJrlJrtCtvhPPQdnvnnvnwdW"
+ "FdQQJRdfSSfrJsRZfFsRSvtDBmDHGtGqbgvnmbDnvDGq"
+ "lcMzjCPTVtMqgWWGqn"
+ "VpLjcVPczhzznPLcPhTwFQFRZNfFNrNZFpZNsZJR"
+ "VWgJhmdDdJDdVPggPSTSTWvvfRzfFfFbNb"
+ "jCQtnpGQrHMctnpzRbFfgSwHvgwfwv"
+ "ntcMcqLMcQccQLgjBPLdhZDVlJPVdDLJ"
+ "RnPnwtqHnJthjLMcWWncMn"
+ "msdCrCdNpBBsCrlNTpNBDNGzcLchQjFQzccQLQpzLzWtFS"
+ "sTbdTBNrTCTTBCNBlVbwgVPJHtPgPvqgff"
+ "QmBsmpmcZQNqPqVnPFVpGh"
+ "gDDMDLMJgHfJwJMzfTfdGLhChPtvnGRPRRLFGPGv"
+ "DTlzgwfDrrrMWlncbscNnlSW"
+ "tBwvGHFttrFrvRgRhCmCmwQmMg"
+ "JWbNJZjzfbVjWjBhqfmSnhqCqgnQ"
+ "ZZJJJbclzJcsTPdvTTPTBFtHDF"
+ "LszmFTFpTmszLrpqSmFpzcvQjtQjvLJgJtcBjgtJjj"
+ "VHNwwNCVCChddfwHlWdnlnGRQPcQjRvMWBJJtMMWcvPJMM"
+ "nGHNVHhnfnHDNhCfdhNNlwHvmpDrZDmpzmbZSZFsmmbqrrsz"]
+aoc2022.core> (refer '[clojure.set/intersection])
+Execution error (ClassCastException) at aoc2022.core/eval6126 (form-init18288460431332102703.clj:358).
+class clojure.lang.PersistentVector cannot be cast to class clojure.lang.Symbol (clojure.lang.PersistentVector and clojure.lang.Symbol are in unnamed module of loader 'app')
+aoc2022.core> (refer 'clojure.set :only '[intersection])
+nil
+aoc2022.core> (intersection #{ 1 2} #{ 2 3})
+#{2}
+aoc2022.core> (intersection [1 2] [2 3 4])
+[1 2]
+aoc2022.core> (set [1 2])
+#{1 2}
+aoc2022.core> (intersection (set [1 2]) (set [2 3 4]))
+#{2}
+aoc2022.core> (intersection (set [1 2]) (set [2 3 3 4]))
+#{2}
+aoc2022.core> (intersection (set [1 2 2]) (set [2 3 3 4]))
+#{2}
+aoc2022.core> (odd? 3)
+true
+aoc2022.core> (odd? 4)
+false
+aoc2022.core>   (string->rucksacks rucksacks-string)
+
+["LHLRlCCvCLVgHPfCHtVjBGrBDNzWFBsBGBfscGsD"
+ "nQwbnwwpbrJBrNWB"
+ "hmnSdSdQpTpdnlPdvddPNglLjH"
+ "RZhwpDsNqVmQClwl"
+ "TLJfLTPqcvTrvvLMLMlVzzvVVQQtmQCmtzmV"
+ "MJjccdfTMcbqjNSRSZsSDZ"
+ "LLrNNqCTCwLTttwcNctqFGmRBSBjzjbSzbBbjNbzjB"
+ "GnhhZQPDGdldgQmQSjpzjzQssb"
+ "gDJZPMnPnhlhJWhZntLCLcTqVMLrGVtMfM"
+ "rrBgDBGnVnffDnfQQqngJhhSRQvhhCRRRSZbRpRzwQ"
+ "NtLmcHPHMHHssFJphZpbhwpNRbbC"
+ "LJPHlmdJDgrrqrnl"
+ "nJhrcNnfrFwNhPdMQSgZSCMjQn"
+ "LjqGWsGWllRRlHVsqGGWsZZSSHQgPmHZZSPvdPCmvQ"
+ "zqqVTWjqBsTJprNbppFb"
+ "zSMgWzlgFSWFcGZlCZGlrrTc"
+ "spnQHdQmHddNmpWrpWcChccTWc"
+ "BsRsnmBQdNWsvRPzbzbLzDVSPSbVLM"
+ "lDfbffptlrJZTBJHjjBWjT"
+ "LcwwgQLgzvztwtMQGCMVCHWmnmjWnGhFHnZjmZhjhT"
+ "sCqtzsswCgccbSqrDSqbNNfN"
+ "snnnjwRRwGSSnVmhhVMhGFbgQgbzFFPPgQQmPbbgQd"
+ "qCrccvcDDcvqDZlCcrcfQNQFdsbgWzFfQddQQPgQ"
+ "ZcrvrBqBTCZnBBswjwpSRs"
+ "qSczBfBcjMZMfctsmsGmFJsmQQcQCr"
+ "wPhTLNVNGLNdGHPHwlQsnrnmnrQvHFFHQn"
+ "dLdwbNLRdgGbgTjZfDbqDWjftSzW"
+ "rZwlrtRtNtlHqVBtdqQgdq"
+ "fbwzpPwbhJzpwfTSHgdgqcJVcBjHvHdJ"
+ "LLPbhzPpTTbTshfGhPwSFWnNmMrrZZmNmZDmWNCCZs"
+ "tMHgMWMQWgFJTHsWMvJrVdlmvlSvdvlpvG"
+ "RNfZZfRttBtdlZlmmmplSS"
+ "DzzNDDRwnwwbLnMFtsMntQFM"
+ "qHqBMNqgMwHMbnGStHSbndnt"
+ "PwWZPjpfsDsDsPfPfjdbSvbWhdFSbFGSWFtr"
+ "wfpjpJcfVsspzZRRszDpwcRggLTQQBLqNqcqcggLCgNmlq"
+ "TmmFjtvFdDGjdFFJjFRDLNLHGBVcqgLcLgVBLqgV"
+ "WbWSPSwQCWrWQSrCbwNVlLlBZLBvLlvZVqPl"
+ "SfwbhrwQQbbMwCwWCrbwJRvptJfjDTDRvzTttRjp"
+ "jzqSMszqsbVVMVMgWhWCgMrpGgpB"
+ "wrwLcFQmPlFFlwLZmFGTfPvWGfPvhWWWvGgf"
+ "wRZtHFHmzNDHSqrs"
+ "NprlCgrrnrNCjplSCtljpFrFZLzzgwmVgBzBZZPwzBPQBwVL"
+ "HsDMvHTDfsfQZfZzmPWL"
+ "JcPsDGTqcTqSdrSCtnCt"
+ "cFcmfmJFtFmtlTNtLlCWTT"
+ "QPQzjRRsVsQqBqwlTlNBpLNSWDpN"
+ "QblgzRPgbgQsVvgPVQhgQqjvMnJfccnZddcGGfrFJMFGGF"
+ "PWbWmFFnPFPWbDVVmmDHDFGdGhTQdLdnTZQZZcGSGGdQ"
+ "ClzjNBlBJvlsBdcPLZdLPQjLQZ"
+ "vJMBpBzzzfNCCzCffJlzgMWDWwPDtVtmVHPMwVHD"
+ "bJjWzWFlTMjjSNBrRcBrZR"
+ "mwnwqPwnGQPCqmJmPQJPCVNcRZBRRrrNrmrcVpSrRf"
+ "PGvQQGPqvhWFWlJbDv"
+ "PNPrdmPGRJlZCrCJlGQzjRFLpFRppjgppgcj"
+ "DwfVnssbVnSWShDwsnnhBLFjFgjFBzDBjHDLpHDj"
+ "vSsMgbsTfTwwfMffnTvgNNCmrPJtCNrJrCrrtvGm"
+ "cRnRplCzccVcrwcnppVVzRCNhfhgChNJfPgHJdHDNtNCtP"
+ "WFmbLMZdLBqfJNbPTfttDD"
+ "BdMWdQsGsSsrpzrswr"
+ "llhhZzSLqlzwRrffzwzT"
+ "GvBbNjHbjjTGGHHFcsFvfRrtJQPvtRfwwfrPJD"
+ "HGbcbTTjHFNpppmLnSdplWqZ"
+ "FhwFbPwsvtRgVCgvMT"
+ "HJVHdHBWdBQSSSQnqSQLqZHtcCctppgBtRrgtMCgTprRMM"
+ "QNzZLVSLLLDGPPzPmbFs"
+ "VdTHmWCVZDTPBBWBQBFQQg"
+ "MzjMjzCjJsbJhhPz"
+ "crfGGLwwLGrtrvCtdTmdDH"
+ "wRLvLmGQLwFPBRmnLCLmGQTzNNqVNZMMVzzQbzVbNZpMVb"
+ "jsgJWjdHghsglHtWsjSfHzVNqzfpCCzqDpzDrVVrrD"
+ "jJtWWsWhtSHsSSgchthHcjHCvcFCRvwvvTTFBGvBmmGLnL"
+ "LpjWLNqWpwRWMqLRGjwJlStgbtrVgHFrGllDDrVH"
+ "SQmmTcZZvSZBTmTSzhPTddbVDhHllgFCDHtrDHgDVVDr"
+ "PzTTvznBncnfTmTTQcPdmzzMqWNfqwRLpWJsNfwLJjsSwJ"
+ "lsGdGwBsflGrfsHvHwQLdFrmPhDhCFhhjWCVmhDzmbmPhC"
+ "qtMSNNZZMpcnVzmVbCqjWjzB"
+ "ZZcgRJpBtTMNnntncwgQQdfGHHHlsQffLH"
+ "jBBtjjqfnwStBSrVVFwSVVvvWzHmcWvWbvPmPbWrbMRM"
+ "GTdNDlpJhlCvPbHgcDmgDH"
+ "JZQdQhNldLdTpGdJGdNCpLZdSBnnBFfHHswqqjffZsqsFjns"
+ "phJhDPQLDSJvpHhvDJhfrFQVRrnsslrgwrVrrRjg"
+ "mWNWqZWWZBMdCGMNCdWmWCNCsnVFTRsVnZFlsrlFwFgVsgjr"
+ "dWdjttGmNCBchJfhHvhPtvJt"
+ "CSFSFdfCzJhtSCHQFjQHQWFHRNHG"
+ "wnbrgZnwZgDLsLbwsLrsrNWQNjPZHHvPPQHNqHHvqB"
+ "LbmTLDsgggQmzmCCppdtSJtM"
+ "SzSSchCdZgHbwHSZ"
+ "GsMMmslnsfmNGNNNVVtZWdwbqQbpgWjjgWZjQm"
+ "DvlMtflGGVGthhzdvLvhrTcc"
+ "dvfVNqHlQfGRcjDczlCDnC"
+ "PsPsStLprtTTFSTLmhSVSFSsCzRRjzDnMJDCMWWDjMnMnpjW"
+ "hBFPhSBFttBhStLwmsPTtPsFHZNGfQgdgdZbdqZwdgNVvwvH"
+ "rhjcChdgjdCrjLjLLSLmLFMmFtNnnbQNNNPMbbmtQF"
+ "lwWRZDlsWzrbbQpN"
+ "rTRqsqDRRRsDRVrqDgBCdCVShjCBHchjdh"
+ "PsspltlPsmTsmbmfTPSTTCGjhJJjCnpqJJNhhJwNJh"
+ "BdrLVvgQLQVLHRZGnqRhRNdwNC"
+ "WrFVHDgDQFHVLVVDFQMLltmPsssPztwsPTzsWcmc"
+ "CBvvSzFGSGGWfFZpcHqjvjcvcqccJq"
+ "bRQwgbbhrRhdwmQbWtdjnJHqVJccJqgHVJHJcl"
+ "RRmbPrNRRPLLtmbQmbNwddCTSTzBSDBDSMFTBSSPZFFW"
+ "cppsSgNrSgwrGRdHRrwd"
+ "LzqqmCLCLWQvCzmzZwHnZZHSwvwnlDlS"
+ "hzFqFLLLFtSNVsFF"
+ "zpZcZZZdppzDLWDtJGgfGbTGGJTGcc"
+ "qhvNSClCShRrRBBWTQfgBFbgtfgg"
+ "HlHqvjqmCvCvlSSHvVdsVDzjpVjMWdwLpP"
+ "qLdsfNsTHQwnSNSBNS"
+ "gFhWzrhfbmlpmZhJWrFSvRMnwwvvpBpBSpQBMv"
+ "rgWZrbmlmbzFfglgWzGggFJLccVPqLPqtPLGcPsPHcPLTd"
+ "jTTWRCCbwJJNTHrffqNnzh"
+ "DZVmDpgGBVdcMZnqfhlNHQMlNNhl"
+ "sDcpsDZBcmgdssZcnmSWCPWRSRwJWwvFLvRwWj"
+ "hWwhgQlQQgjPhFChZVdbcJ"
+ "zHsrMPNMtDDTmbcJbccmDb"
+ "znzPzrtHtHtMzqHHrsSSLwljqfgwGggjlQjQQgQBGj"
+ "JpnRtqlJsqDJJBBNNmQmgdmRNGGmvv"
+ "hTCbTwMCwVhTWdmDgDvjWD"
+ "MDhhMSwZCbbLVhbLcDSwCwZtZznlzlnqBPBpHPPlBlHJ"
+ "CtvnvqNNDchrhFVpwftmgQgpQfwS"
+ "MbdqPWGjBjMBbwlfVgdmfSfJJS"
+ "jWzbzjWWjWMMbRbMsjzBhChrNHcNqHcrNnhssnsc"
+ "LlLJSWgWllSShRmRlBLJSVBzpTHzTTJcpTHzpTTcPpGpTr"
+ "MfMqnvbvDfbFFZDfFNjsGrRppHpZGGcGrcPprz"
+ "wfNFvtwMvbnntftjfNtVmlgmStBmlBWdQQRg"
+ "GpFRRPGWqzHwdqpzqbjjgfZptBBVMSjSfBZc"
+ "TClllrnsJvDMBgcjfmtssB"
+ "NlhNNchrNJlLvClNDrzbGRqwqqqwqPPFLGdd"
+ "qFmVtvmmVvzzFtzzGzzMNNMSSTjNJlStjSfNgf"
+ "sWrPBCnCTMsTJfSM"
+ "QTLbpnRpRppnRQdRzRZqGzFFVVRz"
+ "WGGPjFvMVNjlcQJr"
+ "bslfldbgtpSmwmSNHQhLJhcwLcQrQV"
+ "gTltCsSsssPFnDzWPTMz"
+ "hhRRhQgGrHjhRsrgqznbzncZjVVJVjncjd"
+ "DSFfNTBFSDmMSTDlFbBBdccCdJJZCbZCbW"
+ "DDLmdSmTvQQgsgvGHH"
+ "dNqNgNvFnvdZHFWnZWNBTQlPTppPGlCTpBQppq"
+ "LJrtLrsLjsGvTCTpQP"
+ "mtLhjVjMhhmVMvtJmLfhFWHnngbRRdZHngnZWZ"
+ "NzdVNzqqCtCHMMZBCGBW"
+ "psjllRjFpjpbjspFmWmWnLBmMMQMmHbm"
+ "DhsTPDRTDHpsvRjdNtzJJJdhqwcdqc"
+ "VbhRbZgRHMFhQpHd"
+ "fvlqPzmzJJqJSPsWmPTNddNFHbNFGHNTHSbc"
+ "CqzlfqrCnbrBZjBr"
+ "SNSrDZFHnTqFsFddsCmsMC"
+ "ctVthlGjfhGljcCJmcqMCqcqBB"
+ "VtjvtjhhPPtWqVPLjvqjLVNRppRTvNSnbnZRZTHRnpTD"
+ "fzsBSsNBMNMszNGGJvgjjPggzjdFPgpJ"
+ "bmrVVVrmRrrvRmwvqlbHTDgwdLFjQPJPFddwJPFggj"
+ "HHHrZqhqbTMcZBCZfvcN"
+ "tzsJsnsmBzlVqjssZZrg"
+ "MQZHfNCffpMfpGSpPvpfCGCTTVwFTlwrggjSgqFjVjTwwg"
+ "NfMGGGPZpvLDvLCGGfQHMpZRDRWchRRtBBzmJnmzmnBznb"
+ "BSRBjtNjZrsjRjjNsVBjbrMwCgGCCwCdHrlcdccGcH"
+ "DJTTJLpFnFLdJJqPLTWqLTpwHzCGccCzvvcHwMvWzggCMC"
+ "PmpTTdndmmLqfLTTLDqJVBssbbStVmjjSsZNsBZm"
+ "ddCnZvCDSgghFhbbmFVQ"
+ "JzlMcJTMMPPfJJfsMsjWlHVhLbQVlFWmHbbb"
+ "BPwwsPfsqszfFqppwTsqzpntDSnCBnDRZrSZdnDdtvZD"
+ "SllzzPplWldwLGlzbtPZZjVScnnNSjnNsqNqsc"
+ "BrCfFDJFDHBhJCChQFhCCBDcTnNVpZZcNcvQTcjvvcTcZV"
+ "RCmFHJDJhCmBmRCgDCFRpmGbWWbLPlbMWzzGttzgLMbt"
+ "vGTfsZnfvfzTjsnfzTJlwqQjwmCqqMFjFFQMlq"
+ "LHtHRVLRLNtWcmVbRrPbRcwgQwgwMwClwClwrgFpwqpw"
+ "VDPtbVLBmLbLbDDNnnnzJJfJfBfvSGBn"
+ "lpPCRVVQppzHlZgzglgF"
+ "rtfttLdLdscmGtzngPHHFHFH"
+ "LPLLhfhbTDLmPdcrcWdTcDSjjRqwwbqpRwNBNpBwjQwR"
+ "dWQfCJrwvQCfFqNwRbbzVbVVLGTR"
+ "ZpZshPMzBjGjtVMN"
+ "phpSlSlDlcZpcZPrdHCFzFzFWFDWQH"
+ "tfMMZhjLlChsdsds"
+ "PHQRMHRwpRPBMvWvPRBpPdWDslGrbscTlTGcCsGddG"
+ "FqPSvHPHPBzQRBBwwRJfVtgjzntMntjJLMtJ"
+ "VBwJvwVwNbVRdPwMgWggGMgH"
+ "jDhqflDDhrqshNhdgPGHphLg"
+ "FltsrtcFrclrNqDfqmzQJQQRBzBCvCFvBR"
+ "RZsSSJDJZLDWnGDMLD"
+ "ClbnlfmpNtmgbtmMqWdjNGjLQjLqLj"
+ "gcblTlVCnVmcPrvRPFRrZs"
+ "mbJcScmbDWLmSBzwjPRTfjmmRhpl"
+ "tFFFtGttdClHVMCHFMMwTpwNjGpzPpNRRzzpPN"
+ "gCCdvZCVHsFvJnnDSglSglDn"
+ "dSndnRRvVSpLSphfqvTgWqrzqvvw"
+ "PBFQbQbDhGfjTTFzqG"
+ "tPmCJMtDDNcMVdhhVc"
+ "QVRVHCQRmdTRqrZFCWrLZNZFbb"
+ "ncncsPnhslBRSSSbFhtbZDLMbLbtLb"
+ "lvflPcfPSsPzlJlPlcPBfHJQwRwHmqdVpRGGGdQmww"
+ "GTCGMCcGdgRnnbbbMLwmMz"
+ "DQFZzllWDDLwDJLnJpnp"
+ "qBVrNNlZfFNlWlWqfRzhgvhCqHRdCGGSvc"
+ "ZnMnGbLZfJcBcLTgWF"
+ "dHJjdzqssHHNJwCHpHtDccvtBTtvccWWrrTWSg"
+ "CmlqCNzCzHlmdsqzNzRhMhZRbZMPmRfRJQPb"
+ "LsLLrFLcFjrtmZhhmhHGhJGGhH"
+ "ffvbsbWpSBSSCCQbsSBSwwJHHvhZHHGdGVGlMlTVdZlT"
+ "pSzWNPSfCwWNPBfsFqtFLtsqRzqFgj"
+ "hwwpvjVppGpwWGLrcPjrbrrdbjdL"
+ "FBqFFMFHHsHssNHtslqtFmldnnLrPhMnccrnMzZnbLgPLz"
+ "mJBSstlJQpwGSVhC"
+ "cgJDVWsrWggpcHhMzwwPnQMWMm"
+ "SZGBjdBqBBjGjjqNGfGNNHPnRSQFzhnwmnQzQnPHMR"
+ "bjjCZddjZbZBCtLhCZhftrgJglcTlJgvTllJvDVDLg"
+ "QpRJpCFdpqTQcqSTBBGBZVjZjVjFvwVB"
+ "nnnWfnHhPDlDnlLwGjBBbVVZGbCGbP"
+ "LhhLMLMrMWMrCprTqpJQpz"
+ "dqGGZJdZbTTMFFTGJFFbMdnCHSdWcmNmcCdWSggfSW"
+ "QsjjtrzLrQwDPjrQLrCfSSnmCmHWlCgmzlNl"
+ "PQpQPjQPsBstLBPttDrjBwTZMFMZFvJFJhMhnMJqpTJJ"
+ "JMLrSvHJdJvvJfrHMJRfWzWDFPwCcWqRRRcq"
+ "ljZsZTmmtTBlpTlTjQZCtNFPVqDRwWwWWVPcDRVpFRDz"
+ "mBgQgNNTNvrvJSvgCb"
+ "DWbWtzWDfDffbsMbZMffDDLncnnCJmLVsJJJnhgcngLs"
+ "TjgNGSBRTRTQrFRjFGBVLwLnnNncCLLCCcmhPC"
+ "GgGjvgddvvWqqfdZftWH"
+ "zMmsQlMfQQMhjsmjfsmHlhncRRZnRRRJRvZWWnhccdRC"
+ "BptFtDSSrTrpgtgqqgtZtvVVdVvccVnJdVnG"
+ "qpgPqBLDNTgqBrSLpDBMJfjzmbJMHjLMfjslzH"
+ "DPgLgPhfNDRqhDFDsBTtrrrdbbztCbtf"
+ "MjGSScGVGSlJjbbrtTvdzsTq"
+ "JJwJGWMZwMlWnFFgqNQFpF"
+ "WRGDHmGqWHlrmtVVVRVqpNZvZvvvTNPMPjbPdM"
+ "BwhBwsnzwhzSfCfswFvpvTzTdpMpjvPMZNTb"
+ "LFFQgnbfChSFBhFnftRRLrttDmmRJHtlGH"
+ "MhqhRHmDdRlRlGnfZbJVsNNZDnNb"
+ "QwvzgtwvFpmjwzLjFLJZrsZbPfPZbsVpfPsb"
+ "gvjTzBLztLTjwFjtgLTgtzwdWRqdqRTMSWcWTmWlqdhHHm"
+ "ZfzzfmhdpNLNBDDsFfQVCDggfV"
+ "HPFjljSnHrqVDgtgQgQMqC"
+ "rGnSJHvjSwGzwFhGZG"
+ "HqmHRDprrNTZTMbh"
+ "CJvzQRQVQCgNzZbzgMNd"
+ "vPCvFPcfQFlSJBcfRcPHmDGqWGDqpGtjjtGGHl"
+ "wcfpJVHfJBffBBGWRprNRWWWNdhv"
+ "DzMzMPqjDnjgCMZPZjzjCjChGdvvbhNdSvrhNWSNqWRRdS"
+ "jjCTtnMTDsMBtLRQwwQlFV"
+ "JqGnVqCTpDVCTnNLgmPzdgjcGmRg"
+ "HrSBJSHblsJthsBBSBhMsrzmdNRccjLzgcLmjgPPjlLL"
+ "HSwSttbswWJrbrSWppvVqvvnQVppQQ"
+ "JDCHssRTTwcRJDcnCDzRHsHNPZGBtPzFPSPttZSZGBqPBZ"
+ "vWhLmTlfrhFqGWSNQNqF"
+ "vpMhhpfvmTfhvbLhhgvmgvvlCCJCCMnDnDCnsjRMVDMDswCC"
+ "ZgjdlmlmmlJgHJlbZrSDrnrMrmLLDFprmp"
+ "TvqdTtdctvvDrGGSDn"
+ "CWPBhtWqPPwcdVwlNJfVVNNbbb"
+ "vgmrrwlPPrwPBPtmvFcMMrsMSJHscJcMSHDH"
+ "TWdLnZjCLGLMQLHBLS"
+ "jqVTTZqjdTVjNFNPqBvgvBNl"
+ "jmcgMzsmjmfvJwFpFfRWZRWp"
+ "drdSldTmCmTDCNCtbRRWqRwtttFZpZWZqw"
+ "NLCVLNLTbbTrQNQDvnzschgghnmnHQcH"
+ "sRVhVQDVDQRRMQhsqtRRNzqzbNzRqNGp"
+ "WdjCLHLjdFnCCnjnFnLHHmPmNJbztJJpprBpbGzbpJbqGWtB"
+ "CCFFCnFjdnjCTHmCLTLLCnFnQVhQQVDMhQQVgZZNVVDDsTVh"
+ "cGLzZgfzcNNzzRZvjvRmVDmmqCCDSdVVChVnDf"
+ "QstsPlWHQlWhMMtpsbtpQtlpDqBVqPSCSVnTTqmVdDVDVdBV"
+ "stptQFJrHptlQsFJMHtHhFbvNwvjLGvvNgzgjcwczzJcNJ"
+ "SQHCrCFPJZcnWrqn"
+ "vfJvJjfGGDggqZGcWD"
+ "pjLpRwzhRFtHdMQJ"
+ "HNSHNDvnvdffDNfqdZfdStcFFMGmmrRBcmFcrMrqrWFB"
+ "VblwzwhwPLlCGGzgzhmFjbjFrMFrjFBmbcrM"
+ "hlVPTCCQCCzVlPzhGgPVJCpHtdtSpQSZNNfnZdSSdnSD"
+ "cBVmfwqwmWggTRmQzTQl"
+ "CDnnHjSDPLCSCLHLHCHNCDFgwJljFQRRhlglbzJFQQhl"
+ "GptHLtNGHtCHSnCMtGWdcsqqWwMcqvdsVwfd"
+ "HsMFNRNWnbWfZLzWzQ"
+ "PqrpjqNdjjhPcdbpvmfzfbffbzmv"
+ "GjhhcPjPccVrqcPCldCjssHNnTnNttRwwVMTHMnV"
+ "jjCcBswcfnwgpPFPwFFGSFSwFb"
+ "VvmVhVvRRQqttRtQDLzLhqRlrBFMWrGPBSMSZSMFqBWZZP"
+ "mvQmLRvJtBJVnTcJCjsjsdgp"
+ "qgqvPbdMDMMPwpbLFGwtNlNF"
+ "TTQmdJTnSllFGtJNtw"
+ "CSSHmQHfmVcHjQmSvPBdBDDWMVhMhRMB"
+ "WCvQNZdhCDnnPfQPfTzjHcppsHjpsSjHNS"
+ "mFMgMBlMmBqHjjBfTjHzBc"
+ "grJbrqfqMVFJrlJrtCtvhPPQdnvnnvnwdW"
+ "FdQQJRdfSSfrJsRZfFsRSvtDBmDHGtGqbgvnmbDnvDGq"
+ "lcMzjCPTVtMqgWWGqn"
+ "VpLjcVPczhzznPLcPhTwFQFRZNfFNrNZFpZNsZJR"
+ "VWgJhmdDdJDdVPggPSTSTWvvfRzfFfFbNb"
+ "jCQtnpGQrHMctnpzRbFfgSwHvgwfwv"
+ "ntcMcqLMcQccQLgjBPLdhZDVlJPVdDLJ"
+ "RnPnwtqHnJthjLMcWWncMn"
+ "msdCrCdNpBBsCrlNTpNBDNGzcLchQjFQzccQLQpzLzWtFS"
+ "sTbdTBNrTCTTBCNBlVbwgVPJHtPgPvqgff"
+ "QmBsmpmcZQNqPqVnPFVpGh"
+ "gDDMDLMJgHfJwJMzfTfdGLhChPtvnGRPRRLFGPGv"
+ "DTlzgwfDrrrMWlncbscNnlSW"
+ "tBwvGHFttrFrvRgRhCmCmwQmMg"
+ "JWbNJZjzfbVjWjBhqfmSnhqCqgnQ"
+ "ZZJJJbclzJcsTPdvTTPTBFtHDF"
+ "LszmFTFpTmszLrpqSmFpzcvQjtQjvLJgJtcBjgtJjj"
+ "VHNwwNCVCChddfwHlWdnlnGRQPcQjRvMWBJJtMMWcvPJMM"
+ "nGHNVHhnfnHDNhCfdhNNlwHvmpDrZDmpzmbZSZFsmmbqrrsz"]
+aoc2022.core> 
+aoc2022.core> (first  (string->rucksacks rucksacks-string))
+"LHLRlCCvCLVgHPfCHtVjBGrBDNzWFBsBGBfscGsD"
+aoc2022.core> (def s (first  (string->rucksacks rucksacks-string)))
+#'aoc2022.core/s
+aoc2022.core> s
+"LHLRlCCvCLVgHPfCHtVjBGrBDNzWFBsBGBfscGsD"
+aoc2022.core> (count s)
+40
+aoc2022.core> (split-at ( / (count s) 2) s)
+[(\L)
+ (\H
+  \L
+  \R
+  \l
+  \C
+  \C
+  \v
+  \C
+  \L
+  \V
+  \g
+  \H
+  \P
+  \f
+  \C
+  \H
+  \t
+  \V
+  \j
+  \B
+  \G
+  \r
+  \B
+  \D
+  \N
+  \z
+  \W
+  \F
+  \B
+  \s
+  \B
+  \G
+  \B
+  \f
+  \s
+  \c
+  \G
+  \s
+  \D)]
+aoc2022.core> (split-at ( / (count s) 2) s)
+[(\L \H \L \R \l \C \C \v \C \L \V \g \H \P \f \C \H \t \V \j)
+ (\B \G \r \B \D \N \z \W \F \B \s \B \G \B \f \s \c \G \s \D)]
+aoc2022.core> (map set (split-at ( / (count s) 2) s))
+(#{\C \f \g \H \j \L \l \P \R \t \V \v}
+ #{\B \c \D \F \f \G \N \r \s \W \z})
+aoc2022.core> (string->rucksack s)
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:737:15).
+Unable to resolve symbol: string->rucksack in this context
+aoc2022.core> (use 'aoc2022.day-3)
+nil
+aoc2022.core> (string->rucksack s)
+[(\L \H \L \R \l \C \C \v \C \L \V \g \H \P \f \C \H \t \V \j)
+ (\B \G \r \B \D \N \z \W \F \B \s \B \G \B \f \s \c \G \s \D)]Syntax error macroexpanding clojure.core/ns at (src/aoc2022/day-3.clj:1:1).
+:refer - failed: #{:refer-clojure} at: [:ns-clauses :refer-clojure :clause] spec: :clojure.core.specs.alpha/ns-refer-clojure
+:refer - failed: #{:require} at: [:ns-clauses :require :clause] spec: :clojure.core.specs.alpha/ns-require
+:refer - failed: #{:import} at: [:ns-clauses :import :clause] spec: :clojure.core.specs.alpha/ns-import
+:refer - failed: #{:use} at: [:ns-clauses :use :clause] spec: :clojure.core.specs.alpha/ns-use
+[clojure.set :only intersection] - failed: simple-symbol? at: [:ns-clauses :refer :lib] spec: :clojure.core.specs.alpha/ns-refer
+:refer - failed: #{:load} at: [:ns-clauses :load :clause] spec: :clojure.core.specs.alpha/ns-load
+:refer - failed: #{:gen-class} at: [:ns-clauses :gen-class :clause] spec: :clojure.core.specs.alpha/ns-gen-class
+Execution error (FileNotFoundException) at aoc2022.day-3/eval6169$loading (day-3.clj:1).
+Could not locate clojure/set/intersection__init.class, clojure/set/intersection.clj or clojure/set/intersection.cljc on classpath.
+Syntax error compiling at (src/aoc2022/day-3.clj:13:3).
+Unable to resolve symbol: intersection in this context
+
+aoc2022.core> (string->rucksack s)
+[(\L \H \L \R \l \C \C \v \C \L \V \g \H \P \f \C \H \t \V \j)
+ (\B \G \r \B \D \N \z \W \F \B \s \B \G \B \f \s \c \G \s \D)]
+aoc2022.core> (shared-item (string->rucksack s))
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:760:15).
+Unable to resolve symbol: shared-item in this context
+aoc2022.core> (use 'aoc2022.day-3)
+nil
+aoc2022.core> (shared-item (string->rucksack s))
+Execution error (ArityException) at aoc2022.core/eval6240 (form-init18288460431332102703.clj:765).
+Wrong number of args (1) passed to: aoc2022.day-3/shared-item
+aoc2022.core> (shared-item (string->rucksack s))
+#{\f}
+aoc2022.core> (shared-item (string->rucksack s))
+\f
+aoc2022.core> (char \f)
+\f
+aoc2022.core> (int \f)
+102
+aoc2022.core> (int \a)
+97
+aoc2022.core> (lower? \a)
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:778:15).
+Unable to resolve symbol: lower? in this context
+aoc2022.core> (.isUppercase \a)
+Execution error (IllegalArgumentException) at aoc2022.core/eval6293 (form-init18288460431332102703.clj:781).
+No matching field found: isUppercase for class java.lang.Character
+aoc2022.core> (.isUpperCase \a)
+Execution error (IllegalArgumentException) at aoc2022.core/eval6295 (form-init18288460431332102703.clj:784).
+No matching field found: isUpperCase for class java.lang.Character
+aoc2022.core> (Charater/isUpperCase \a)
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:787:15).
+No such namespace: Charater
+aoc2022.core> (Character/isUpperCase \a)
+false
+aoc2022.core> (- \d \a)
+Execution error (ClassCastException) at aoc2022.core/eval6300 (form-init18288460431332102703.clj:792).
+class java.lang.Character cannot be cast to class java.lang.Number (java.lang.Character and java.lang.Number are in module java.base of loader 'bootstrap')
+aoc2022.core> (priority \a)
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:795:15).
+Unable to resolve symbol: priority in this context
+aoc2022.core> (priority \a)
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:798:15).
+Unable to resolve symbol: priority in this context
+aoc2022.core> (use 'aoc2022.day-3)
+nil
+aoc2022.core> (priority \a)
+-1
+aoc2022.core> (int \a)
+97
+aoc2022.core> (- (int \a) (int \a))
+0
+aoc2022.core> (priority \a)
+-1
+aoc2022.core> (priority \a)
+1
+aoc2022.core> (priority \A])
+Syntax error reading source at (REPL:813:28).
+Unmatched delimiter: ]
+aoc2022.core> (priority \A)
+27
+aoc2022.core> (string->rucksacks (slurp "resources/day-3-test.txt"))
+([(\v \J \r \w \p \W \t \w \J \g \W \r)
+  (\h \c \s \F \M \M \f \F \F \h \F \p)]
+ [(\j \q \H \R \N \q \R \j \q \z \j \G \D \L \G \L)
+  (\r \s \F \M \f \F \Z \S \r \L \r \F \Z \s \S \L)]
+ [(\P \m \m \d \z \q \P \r \V) (\v \P \w \w \T \W \B \w \g)]
+ [(\w \M \q \v \L \M \Z \H \h \H \M \v \w \L \H)
+  (\j \b \v \c \j \n \n \S \B \n \v \T \Q \F \n)]
+ [(\t \t \g \J \t \R \G \J) (\Q \c \t \T \Z \t \Z \T)]
+ [(\C \r \Z \s \J \s \P \P \Z \s \G \z)
+  (\w \w \s \L \w \L \m \p \w \M \D \w)])
+aoc2022.core> (priority-sum (slurp "resources/day-3-test.txt"))
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:829:15).
+Unable to resolve symbol: priority-sum in this context
+aoc2022.core> (priority-sum (slurp "resources/day-3-test.txt"))
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:832:15).
+Unable to resolve symbol: priority-sum in this context
+aoc2022.core> (use 'aoc2022.day-3)
+nil
+aoc2022.core> (priority-sum (slurp "resources/day-3-test.txt"))
+Execution error (FileNotFoundException) at java.io.FileInputStream/open0 (FileInputStream.java:-2).
+vJrwpWtwJgWrhcsFMMfFFhFp
+jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+PmmdzqPrVvPwwTWBwg
+wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+ttgJtRGJQctTZtZT
+CrZsJsPPZsGzwwsLwLmpwMDw
+ (No such file or directory)
+aoc2022.core> (priority-sum "resources/day-3-test.txt")
+#function[clojure.core/map/fn--5931/fn--5932]
+aoc2022.core> (priority-sum "resources/day-3-test.txt")
+([(\v \J \r \w \p \W \t \w \J \g \W \r)
+  (\h \c \s \F \M \M \f \F \F \h \F \p)]
+ [(\j \q \H \R \N \q \R \j \q \z \j \G \D \L \G \L)
+  (\r \s \F \M \f \F \Z \S \r \L \r \F \Z \s \S \L)]
+ [(\P \m \m \d \z \q \P \r \V) (\v \P \w \w \T \W \B \w \g)]
+ [(\w \M \q \v \L \M \Z \H \h \H \M \v \w \L \H)
+  (\j \b \v \c \j \n \n \S \B \n \v \T \Q \F \n)]
+ [(\t \t \g \J \t \R \G \J) (\Q \c \t \T \Z \t \Z \T)]
+ [(\C \r \Z \s \J \s \P \P \Z \s \G \z)
+  (\w \w \s \L \w \L \m \p \w \M \D \w)])
+aoc2022.core> (priority-sum "resources/day-3-test.txt")
+([(\v \J \r \w \p \W \t \w \J \g \W \r)
+  (\h \c \s \F \M \M \f \F \F \h \F \p)]
+ [(\j \q \H \R \N \q \R \j \q \z \j \G \D \L \G \L)
+  (\r \s \F \M \f \F \Z \S \r \L \r \F \Z \s \S \L)]
+ [(\P \m \m \d \z \q \P \r \V) (\v \P \w \w \T \W \B \w \g)]
+ [(\w \M \q \v \L \M \Z \H \h \H \M \v \w \L \H)
+  (\j \b \v \c \j \n \n \S \B \n \v \T \Q \F \n)]
+ [(\t \t \g \J \t \R \G \J) (\Q \c \t \T \Z \t \Z \T)]
+ [(\C \r \Z \s \J \s \P \P \Z \s \G \z)
+  (\w \w \s \L \w \L \m \p \w \M \D \w)])
+aoc2022.core> (priority-sum "resources/day-3-test.txt")
+(\p \L \P \v \t \s)
+aoc2022.core> (priority-sum "resources/day-3-test.txt")
+(16 38 42 22 20 19)
+aoc2022.core> (priority-sum "resources/day-3-test.txt")
+157Day 3 result:  7581
+Day 3 result:  7581
+
+aoc2022.core> (priority-sum "resources/day-3-test.txt")
+157Day 3 result:  7581
+
+aoc2022.core> (priority \r)
+18
+aoc2022.core> s
+"LHLRlCCvCLVgHPfCHtVjBGrBDNzWFBsBGBfscGsD"
+aoc2022.core> (def r (slurp "resources/day-3-test.txt"))
+#'aoc2022.core/r
+aoc2022.core> r
+"vJrwpWtwJgWrhcsFMMfFFhFp\njqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL\nPmmdzqPrVvPwwTWBwg\nwMqvLMZHhHMvwLHjbvcjnnSBnvTQFn\nttgJtRGJQctTZtZT\nCrZsJsPPZsGzwwsLwLmpwMDw\n"
+aoc2022.core> (string->rucksacks r)
+([(\v \J \r \w \p \W \t \w \J \g \W \r)
+  (\h \c \s \F \M \M \f \F \F \h \F \p)]
+ [(\j \q \H \R \N \q \R \j \q \z \j \G \D \L \G \L)
+  (\r \s \F \M \f \F \Z \S \r \L \r \F \Z \s \S \L)]
+ [(\P \m \m \d \z \q \P \r \V) (\v \P \w \w \T \W \B \w \g)]
+ [(\w \M \q \v \L \M \Z \H \h \H \M \v \w \L \H)
+  (\j \b \v \c \j \n \n \S \B \n \v \T \Q \F \n)]
+ [(\t \t \g \J \t \R \G \J) (\Q \c \t \T \Z \t \Z \T)]
+ [(\C \r \Z \s \J \s \P \P \Z \s \G \z)
+  (\w \w \s \L \w \L \m \p \w \M \D \w)])
+aoc2022.core> (string/split r #"\n")
+["vJrwpWtwJgWrhcsFMMfFFhFp"
+ "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL"
+ "PmmdzqPrVvPwwTWBwg"
+ "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn"
+ "ttgJtRGJQctTZtZT"
+ "CrZsJsPPZsGzwwsLwLmpwMDw"]
+aoc2022.core> (partition 3 (string/split r #"\n"))
+(("vJrwpWtwJgWrhcsFMMfFFhFp"
+  "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL"
+  "PmmdzqPrVvPwwTWBwg")
+ ("wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn"
+  "ttgJtRGJQctTZtZT"
+  "CrZsJsPPZsGzwwsLwLmpwMDw"))
+aoc2022.core> (def g (first (partition 3 (string/split r #"\n"))))
+#'aoc2022.core/g
+aoc2022.core> g
+("vJrwpWtwJgWrhcsFMMfFFhFp"
+ "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL"
+ "PmmdzqPrVvPwwTWBwg")
+aoc2022.core> (chars (first g))
+Execution error (ClassCastException) at aoc2022.core/eval8751 (form-init18288460431332102703.clj:920).
+class java.lang.String cannot be cast to class [C (java.lang.String and [C are in module java.base of loader 'bootstrap')
+aoc2022.core> (Character/chars (first g))
+Syntax error (IllegalArgumentException) compiling . at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:923:15).
+No matching method chars found taking 1 args for class java.lang.Character
+aoc2022.core> (set (first g))
+#{\c \F \f \g \h \J \M \p \r \s \t \v \W \w}
+aoc2022.core> (intersect (map set g))
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:928:15).
+Unable to resolve symbol: intersect in this context
+aoc2022.core> (clojure.set/intersect (map set g))
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:931:15).
+No such var: clojure.set/intersect
+aoc2022.core> (require '[clojure.sets :as set])
+Execution error (FileNotFoundException) at aoc2022.core/eval8758 (form-init18288460431332102703.clj:934).
+Could not locate clojure/sets__init.class, clojure/sets.clj or clojure/sets.cljc on classpath.
+aoc2022.core> (require '[clojure.set :as set])
+nil
+aoc2022.core> (set/require '[clojure.set :as set])
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:939:15).
+No such var: set/require
+aoc2022.core> (set/intersect (map set g))
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:942:15).
+No such var: set/intersect
+aoc2022.core> (map set g)
+(#{\c \F \f \g \h \J \M \p \r \s \t \v \W \w}
+ #{\D \F \f \G \H \j \L \M \N \q \R \r \S \s \Z \z}
+ #{\B \d \g \m \P \q \r \T \V \v \W \w \z})
+aoc2022.core> (set/intersection (map set g))
+(#{\c \F \f \g \h \J \M \p \r \s \t \v \W \w}
+ #{\D \F \f \G \H \j \L \M \N \q \R \r \S \s \Z \z}
+ #{\B \d \g \m \P \q \r \T \V \v \W \w \z})
+aoc2022.core> (apply set/intersection (map set g))
+#{\r}
+aoc2022.core> g
+("vJrwpWtwJgWrhcsFMMfFFhFp"
+ "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL"
+ "PmmdzqPrVvPwwTWBwg")Day 3a result:  7581
+Day 3b result:  7581
+
+aoc2022.core> g
+("vJrwpWtwJgWrhcsFMMfFFhFp"
+ "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL"
+ "PmmdzqPrVvPwwTWBwg")
+aoc2022.core> 
+aoc2022.core> 
+aoc2022.core> (ns aoc2022.day-3)
+nil
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+["vJrwpWtwJgWrhcsFMMfFFhFp"
+ "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL"
+ "PmmdzqPrVvPwwTWBwg"
+ "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn"
+ "ttgJtRGJQctTZtZT"
+ "CrZsJsPPZsGzwwsLwLmpwMDw"]Day 3a result:  7581
+Day 3b result:  7581
+
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+(("vJrwpWtwJgWrhcsFMMfFFhFp"
+  "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL"
+  "PmmdzqPrVvPwwTWBwg")
+ ("wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn"
+  "ttgJtRGJQctTZtZT"
+  "CrZsJsPPZsGzwwsLwLmpwMDw"))Day 3a result:  7581
+Day 3b result:  7581
+
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+((#{\c \F \f \g \h \J \M \p \r \s \t \v \W \w}
+  #{\D \F \f \G \H \j \L \M \N \q \R \r \S \s \Z \z}
+  #{\B \d \g \m \P \q \r \T \V \v \W \w \z})
+ (#{\B \b \c \F \H \h \j \L \M \n \Q \q \S \T \v \w \Z}
+  #{\c \G \g \J \Q \R \T \t \Z}
+  #{\C \D \G \J \L \M \m \P \p \r \s \w \Z \z}))Day 3a result:  7581
+Day 3b result:  7581
+
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+((#{\c \F \f \g \h \J \M \p \r \s \t \v \W \w}
+  #{\D \F \f \G \H \j \L \M \N \q \R \r \S \s \Z \z}
+  #{\B \d \g \m \P \q \r \T \V \v \W \w \z})
+ (#{\B \b \c \F \H \h \j \L \M \n \Q \q \S \T \v \w \Z}
+  #{\c \G \g \J \Q \R \T \t \Z}
+  #{\C \D \G \J \L \M \m \P \p \r \s \w \Z \z}))Day 3a result:  7581
+Day 3b result:  7581
+
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+((#{\c \F \f \g \h \J \M \p \r \s \t \v \W \w}
+  #{\D \F \f \G \H \j \L \M \N \q \R \r \S \s \Z \z}
+  #{\B \d \g \m \P \q \r \T \V \v \W \w \z})
+ (#{\B \b \c \F \H \h \j \L \M \n \Q \q \S \T \v \w \Z}
+  #{\c \G \g \J \Q \R \T \t \Z}
+  #{\C \D \G \J \L \M \m \P \p \r \s \w \Z \z}))Day 3a result:  7581
+Day 3b result:  7581
+
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+Don't know how to create ISeq from: clojure.set$intersection
+Day 3a result:  7581
+Day 3b result:  7581
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+Execution error (ArityException) at aoc2022.day-3/group-badge-priority-sum (day-3.clj:45).
+Wrong number of args (1) passed to: clojure.core/apply
+Day 3a result:  7581
+Day 3b result:  7581
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+(#{\r} #{\Z})Day 3a result:  7581
+Day 3b result:  7581
+
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+(18 52)
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+(18 52)Day 3a result:  7581
+Day 3b result:  7581
+
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+70Day 3a result:  7581
+Day 3b result:  2525
+
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+70Day 3a result:  7581
+Day 3b result:  2525
+Day 3a result:  7581
+Day 3b result:  2525
+
+aoc2022.day-3> (group-badge-priority-sum "resources/day-3-test.txt")
+70
+aoc2022.day-3> (ns aoc2022.day-4)
+nil
+aoc2022.day-4> (slurp path)
+"2-4,6-8\n2-3,4-5\n5-7,7-9\n2-8,3-7\n6-6,4-6\n2-6,4-8\n"Syntax error (IllegalStateException) compiling def at (src/aoc2022/day-4.clj:7:1).
+split already refers to: #'clojure.string/split in namespace: aoc2022.day-4
+Syntax error (IllegalStateException) compiling def at (src/aoc2022/day-4.clj:7:1).
+split already refers to: #'clojure.string/split in namespace: aoc2022.day-4
+
+aoc2022.day-4> (ns-unmap 'aoc2022.day-4 'split)
+nil
+aoc2022.day-4> (doc partial)
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:1056:16).
+Unable to resolve symbol: doc in this context
+aoc2022.day-4> 
+aoc2022.day-4> (require '[clojure.core])
+nil
+aoc2022.day-4> (doc partial)
+Syntax error compiling at (*cider-repl current/AdventOfCode2022:localhost:57685(clj)*:1062:16).
+Unable to resolve symbol: doc in this context
+aoc2022.day-4> 
