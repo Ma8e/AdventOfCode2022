@@ -41,7 +41,6 @@ tree
 
 (println "Day 8a result: " res)
 
-
 (defn view-to-the-right
   [from row]
   (let [width (count row)
@@ -69,7 +68,3 @@ tree
                (view-to-the-right (- height r 1) (reverse column))))))))))
 
 (println "Day 8b result: " max-view)
-
-
-                
-              
