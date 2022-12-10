@@ -24,7 +24,6 @@
    :instr nil
    :instr-i 0})
   
-
 (defn update-registers
   [{:keys [blocked V X instr instr-i] :as registers} instructions]
   (if (> blocked 0)
@@ -38,32 +37,29 @@
        :V new-V
        :instr new-instruction))))
 
-(defn update-screen
-  [screen cycle-no X]
-  (str
-   screen
-   (if (contains? #{(dec X) X (inc X)} (rem (dec cycle-no) 40))
-     "#"
-     ".")))
-
 (defn prettify-screen
   [screen]
   (map (partial apply str) (partition 40 screen)))
 
 (defn process
   [instructions]
-  (let [no-of-instructions (count instructions)
-        checkpoints #{20 60 100 140 180 220}]
-    (loop [cycle-no 1
-           registers (update-registers register-init-state instructions)
-           checkpoint-signal-strength-sum 0
-           screen ""]
+  (let [no-of-instructions (count instructions)]
+    (loop [registers (update-registers register-init-state instructions)
+           X-log  []]
       (if (>= (:instr-i registers) no-of-instructions)
-        [checkpoint-signal-strength-sum
-         (prettify-screen (update-screen screen cycle-no (:X registers)))]
-        (recur (inc cycle-no)
-               (update-registers registers instructions)
-               (if (contains? checkpoints cycle-no)
-                 (+ checkpoint-signal-strength-sum (* cycle-no (:X registers)))
-                 checkpoint-signal-strength-sum)
-               (update-screen screen cycle-no (:X registers)))))))
+        (conj X-log (:X registers))
+        (recur (update-registers registers instructions)
+               (conj X-log (:X registers)))))))
+
+(def X-log (process instructions))
+
+;; sum of signal strenghts (part 1)
+(reduce +  (map #(* (nth X-log (dec %)) %) [20 60 100 140 180 220]))
+
+;; CRT (part 2)
+(def screen (prettify-screen
+ (map (fn [X screen-pos]
+        (if (<= (dec X) (mod screen-pos 40) (inc X))
+          \X
+          \.))
+      X-log (range 0 240))))
