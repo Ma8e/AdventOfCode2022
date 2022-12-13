@@ -34,16 +34,14 @@
       (compare-vectors [(subvec l 1) (subvec r 1)])
       c)))
 
+(def PersistentVector clojure.lang.PersistentVector)
+
 (defmulti mcomp (fn [[l r]] [(class l) (class r)]))
-(defmethod mcomp [java.lang.Long java.lang.Long] [[l r]] (compare l r))
-(defmethod mcomp [clojure.lang.PersistentVector clojure.lang.PersistentVector] [[l r]]
-  (compare-vectors [l r]))
-(defmethod mcomp [java.lang.Long clojure.lang.PersistentVector] [[l r]]
-  (mcomp [[l] r]))
-(defmethod mcomp [clojure.lang.PersistentVector java.lang.Long] [[l r]]
-  (mcomp [l [r]]))
-(defmethod mcomp [clojure.lang.PersistentVector clojure.lang.PersistentVector] [[l r]]
-  (compare-vectors [l r]))
+(defmethod mcomp [Long Long] [[l r]] (compare l r))
+(defmethod mcomp [PersistentVector PersistentVector] [[l r]] (compare-vectors [l r]))
+(defmethod mcomp [Long PersistentVector] [[l r]] (mcomp [[l] r]))
+(defmethod mcomp [PersistentVector Long] [[l r]] (mcomp [l [r]]))
+
 
 (println
  "Day 13a result: "
