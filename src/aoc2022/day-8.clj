@@ -1,4 +1,4 @@
-(ns aoc2022.day-8
+(ns aoc2022.core
   (:require [clojure.string :as string]))
 
 ;(def path "resources/day-8-test.txt")
@@ -12,14 +12,6 @@
 
 (def tree (mapv string-vec->num-vec (mapv #(string/split % #"") (string/split tree-string #"\n"))))
 
-tree
-
-(comment 
-[[3 0 3 7 3]
- [2 5 5 1 2]
- [6 5 3 3 2]
- [3 3 5 4 9]
- [3 5 3 9 0]])
 
 (def width (count (first tree)))
 (def height (count tree))
