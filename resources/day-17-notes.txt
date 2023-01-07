@@ -1,0 +1,29 @@
+
+
+bn = 1000 000 000 000
+
+levels cycle 
+ 136 + 2548 k (levels in chamber)
+
+k = 1 -> height = 2684 (1780 rocks)
+k = 2 -> 5232 (3470 rocks) D = 1690 rocks
+k = 3 -> 7780 = (+  136 (* 3 2548)) levels in chamber 
+
+rock cycle
+90 + m * 1690
+
+(- bn 90) = (* 1690 591715976) + 470)
+bn = (+ (* 1690 591715976) 470 90)
+
+
+591715976 is the numbers cycles with rocks
+each cycle with 1690 rocks contributes 2548 levels
+before the first cycle there are 90 rocks that builds 136 levels
+lastly there's a partial cycle consisting of 470 rocks which contributes 706 levels
+
+(so the total number of levels after bn rocks will be
+(+ 136
+  (* 591715976 2548)
+  706)
+= 1507692307690
+
