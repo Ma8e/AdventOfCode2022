@@ -13,5 +13,7 @@ pom.xml.asc
 .hg/
 .DS_Store
 
+src/aoc2022/day-19-stolen.clj
+
 # Emacs backup files
 *~

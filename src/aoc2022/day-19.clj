@@ -78,20 +78,28 @@
                    resources))))))]
     (choose-build-recurse :geode)))
 
+(defn step-time
+  [state]
+  (update state :minute inc))
+
 (defn max-geodes
   [blueprint]
   (let [initial-state
-        {:robots {:ore 1 :clay 0 :obsidian 0 :geode 0}
+        {:minute 0
+         :robots {:ore 1 :clay 0 :obsidian 0 :geode 0}
          :resources {:ore 0 :clay 0 :obsidian 0 :geode 0}}]
     (letfn [(m-g
               [state]
-              (if-let [robot-to-build (choose-build (:resources state) blueprint)]
-                (build-robot
-                 robot-to-build
-                 blueprint
-                 (mine state))
-                (mine state)))]
+              (step-time 
+               (if-let [robot-to-build (choose-build (:resources state) blueprint)]
+                 (build-robot
+                  robot-to-build
+                  blueprint
+                  (mine state))
+                 (mine state))))]
       (iterate m-g initial-state))))
+
+(take 24 (map (fn [a b] [a b]) (range) (max-geodes (first blueprints-test))))
 
 
 
