@@ -1,9 +1,6 @@
 (ns aoc2022.core
   (:require [clojure.string :refer [split]]))
 
-(def blueprint-string-test "Blueprint 1:  Each ore robot costs 4 ore. Each clay robot costs 2 ore. Each obsidian robot costs 3 ore and 14 clay. Each geode robot costs 2 ore and 7 obsidian.\nBlueprint 2:  Each ore robot costs 2 ore.  Each clay robot costs 3 ore. Each obsidian robot costs 3 ore and 8 clay. Each geode robot costs 3 ore and 12 obsidian.")
-
-
 (def resource-types '(:ore :clay :obsidian :geode))
 (def robot-types resource-types)
 
@@ -36,10 +33,8 @@
   [s]
   (mapv parse-blueprint (split s #"\n")))
 
-(def blueprints-test (parse-blueprints blueprint-string-test))
-
+(def blueprints-test (parse-blueprints (slurp "resources/day-19-test.txt")))
 (def blueprints (parse-blueprints (slurp "resources/day-19.txt")))
-
 
 (defn subtract-map
   [m1 m2]
@@ -67,11 +62,11 @@
     state
     (keys (:robots state))))
 
-(def resources-for-robot?
-   (fn [robot blueprint resources]
+(defn resources-for-robot?
+  [robot blueprint resources]
      (every?
       (fn [[resource c]] (>= c (get-in blueprint [robot resource] 0)))
-      resources)))
+      resources))
 
 (defn enough-of-robots?
   [robot state blueprint time-left]
@@ -86,62 +81,75 @@
 (defn build-candidates
   [state blueprint max-time]
   (let [time-left (- max-time (:time state))]
-    (if (= time-left 1)
-      '(:none)
       (->> robot-types
            (filter #(resources-for-robot? % blueprint (:resources state)))
            (remove #(enough-of-robots? % state blueprint time-left))
            (cons :none)
-           ((fn [rt] (if (some #{:geode} rt) '(:geode) rt)))))))
+           ((fn [rt] (if (some #{:geode} rt) '(:geode) rt))))))
           
 (defn inc-state-time
   [state]
   (update state :time inc))
 
-(defn incr-state
-  [robot blueprint state]
-  ((comp
-    (partial build-robot robot blueprint)
-    inc-state-time
-    mine)
-   state))
-  
-(def max-geodes
-  (memoize 
-   (defn mg
-     [state blueprint max-time]
-     (if (> (:time state) max-time)
-       (get-in state [:resources :geode])
-       (let [build-candidates
-             (build-candidates state blueprint max-time)]
-         #_(println (:time state) build-candidates (:robots state))
-         (apply max
-                (for [robot build-candidates]
-                  (max-geodes
-                   (->> state
-                        mine
-                        inc-state-time
-                        (build-robot robot blueprint))
-                   blueprint
-                   max-time))))))))
- 
 (def initial-state
   {:time 1
    :resources {:ore 0 :clay 0 :obsidian 0 :geode 0}
    :robots {:ore 1 :clay 0 :obsidian 0 :geode 0}})
 
+
+;; utan memoization
+(defn max-geodes
+  [state blueprint max-time]
+  (if (> (:time state) max-time)
+    (get-in state [:resources :geode])
+    (let [build-candidates
+          (build-candidates state blueprint max-time)]
+      (apply max
+             (for [robot build-candidates]
+               (max-geodes
+                (->> state
+                     mine
+                     inc-state-time
+                     (build-robot robot blueprint))
+                blueprint
+                max-time))))))
+
+;; med memoization 
+(defn max-geodes-memoized
+  [blueprint max-time]
+  (let [cache (atom {})
+        hitstat (atom {:hit 0 :miss 0})]
+    (letfn [(mg [state]
+      (if-let [r (get @cache state)]
+          (do
+            (swap! hitstat update :hit inc)
+            r)
+          (let [result 
+                (if (> (:time state) max-time)
+                  (do
+                    (get-in state [:resources :geode]))
+                  (let [build-candidates
+                        (build-candidates state blueprint max-time)]
+                    (apply max
+                           (for [robot build-candidates]
+                             (mg
+                              (->> state
+                                   mine
+                                   inc-state-time
+                                   (build-robot robot blueprint)))))))]
+            (swap! cache assoc state result)
+            (swap! hitstat update :miss inc)
+            result)))]
+      [(mg initial-state) @hitstat])))
+
+
 (defn quality-level
   [blueprint]
   (*
    (:blueprint blueprint)
-   (max-geodes initial-state blueprint 24)))
+   (max-geodes-memoized blueprint 24)))
 
 (defn quality-score
   [blueprints]
   (apply + (pmap quality-level blueprints)))
-
-
-                      
-
-    
          
