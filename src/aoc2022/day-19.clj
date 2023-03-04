@@ -97,7 +97,7 @@
    :robots {:ore 1 :clay 0 :obsidian 0 :geode 0}})
 
 
-;; utan memoization
+                                        ; utan memoization
 (defn max-geodes
   [state blueprint max-time]
   (if (> (:time state) max-time)
@@ -114,7 +114,7 @@
                 blueprint
                 max-time))))))
 
-;; med memoization 
+                                        ; med memoization 
 (defn max-geodes-memoized
   [blueprint max-time]
   (let [cache (atom {})
@@ -142,6 +142,47 @@
             result)))]
       [(mg initial-state) @hitstat])))
 
+                                        ; med pruning 
+
+(defn upper-bound
+  [state max-time]
+  (let [time-left (- max-time (:time state))]
+    (+ (get-in state [:resources :geode])
+       (* (get-in state [:robots :geode]) (inc time-left))
+       (/ (* time-left (inc time-left)) 2))))
+
+(defn max-geodes-pruned
+  [blueprint max-time]
+  (let [cache (atom {})
+        best (atom 0)
+        hitstat (atom {:hit 0 :miss 0 :pruned 0})]
+    (letfn [(mg [state]
+              (if-let [r (get @cache state)]
+                (do
+                  (swap! hitstat update :hit inc)
+                  r)
+                (if (< (upper-bound state max-time) @best)
+                  (do
+                    (swap! hitstat update :pruned inc)
+                    0)
+                  (let [result 
+                        (if (> (:time state) max-time)
+                          (do
+                            (get-in state [:resources :geode]))
+                          (let [build-candidates
+                                (build-candidates state blueprint max-time)]
+                            (apply max
+                                   (for [robot build-candidates]
+                                     (mg
+                                      (->> state
+                                           mine
+                                           inc-state-time
+                                           (build-robot robot blueprint)))))))]
+                    (swap! best max result)
+                    (swap! cache assoc state result)
+                    (swap! hitstat update :miss inc)
+                    result))))]
+      [(mg initial-state) @hitstat])))
 
 (defn quality-level
   [blueprint]
