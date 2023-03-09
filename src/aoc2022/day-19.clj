@@ -142,7 +142,7 @@
             result)))]
       [(mg initial-state) @hitstat])))
 
-                                        ; med pruning 
+                                        ; med pruning och memoization
 
 (defn upper-bound
   [state max-time]
